@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Us - KPSN</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Kebbi Progressive Social Network (KPSN)</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="structure.html">Structure</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="join.html" class="active">Join Us</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html">Support Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- JOIN FORM SECTION -->
+  <main>
+    <section class="join">
+      <h2>Join KPSN Today</h2>
+      <p>Fill the form below to become a member of the Kebbi Progressive Social Network.</p>
+
+      <form action="https://formsubmit.co/nasabk01@gmail.com" method="POST" class="join-form">
+  
+  <!-- HIDDEN SECURITY FIELDS -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://kpsn.github.io/Pages/thankyou.html">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="Full Name" required>
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="Phone Number" required>
+
+        <label for="email">Email (optional)</label>
+        <input type="email" id="email" name="Email">
+
+        <label for="lga">Your LGA *</label>
+        <input type="text" id="lga" name="LGA" required>
+
+        <label for="ward">Your Ward *</label>
+        <input type="text" id="ward" name="Ward" required>
+
+        <label for="smartphone">Do you have a smartphone? *</label>
+        <select id="smartphone" name="Owns Smartphone" required>
+          <option value="">-- Select --</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+
+        <label for="reason">Why do you want to join KPSN?</label>
+        <textarea id="reason" name="Reason for Joining" rows="4"></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kebbi Progressive Social Network. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

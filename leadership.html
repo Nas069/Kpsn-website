@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leadership - KPSN</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Kebbi Progressive Social Network (KPSN)</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="structure.html">Structure</a></li>
+        <li><a href="leadership.html" class="active">Leadership</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html">Support Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- LEADERSHIP SECTION -->
+  <main>
+    <section class="leadership">
+      <h2>State Executive Council</h2>
+      <p>Meet the youth executives of KPSN leading our state-wide digital movement.</p>
+
+      <div class="leaders-container">
+
+        <!-- Executive Cards -->
+        <div class="leader-card">
+          <img src="../Images/president.jpg" alt="Fatima Ibrahim">
+          <h3>Fatima Ibrahim</h3>
+          <p class="position">President</p>
+          <p class="bio">Visionary leader and grassroots mobilizer from Birnin Kebbi.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/vp.jpg" alt="Sulaiman Yusuf">
+          <h3>Sulaiman Yusuf</h3>
+          <p class="position">Vice President</p>
+          <p class="bio">Peace-building and youth engagement strategist from Zuru.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/secretary.jpg" alt="Hauwa’u Abdullahi">
+          <h3>Hauwa’u Abdullahi</h3>
+          <p class="position">Secretary General</p>
+          <p class="bio">Administrative planner and civic educator from Argungu.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/kabiru.jpg" alt="Kabiru Usman">
+          <h3>Kabiru Usman</h3>
+          <p class="position">Media & Publicity</p>
+          <p class="bio">Media creator and content designer from Yauri.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/amina.jpg" alt="Amina Bello">
+          <h3>Amina Bello</h3>
+          <p class="position">Social Media Strategist</p>
+          <p class="bio">Campaign designer and social voice from Jega.</p>
+        </div>
+
+      </div>
+
+      <!-- LGA COORDINATORS Section -->
+      <section class="member-section">
+  <h2>Registered Grassroots Members</h2>
+  <div id="memberList"></div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const members = JSON.parse(localStorage.getItem('kpsnMembers')) || [];
+    const memberList = document.getElementById('memberList');
+
+    if (members.length === 0) {
+      memberList.innerHTML = "<p>No members added yet.</p>";
+    } else {
+      members.reverse().forEach(m => {
+        const div = document.createElement('div');
+        div.className = "member-card";
+        div.innerHTML = `
+          <strong>${m.name}</strong> <br>
+          LGA: ${m.lga} | Ward: ${m.ward} <br>
+          📞 ${m.phone}
+          <hr/>
+        `;
+        memberList.appendChild(div);
+      });
+    }
+  });
+</script>
+      <h2 style="margin-top: 40px;">LGA Coordinators</h2>
+      <p>Meet the grassroots leaders coordinating youth in their local governments.</p>
+
+      <div class="leaders-container">
+
+        <!-- Coordinator Cards -->
+        <div class="leader-card">
+          <img src="../Images/musa.jpg" alt="Musa Garba">
+          <h3>Musa Garba</h3>
+          <p class="position">Birnin Kebbi LGA Coordinator</p>
+          <p class="bio">Dedicated organizer for ward-level mobilization and unity.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/zainab.jpg" alt="Zainab Yusuf">
+          <h3>Zainab Yusuf</h3>
+          <p class="position">Argungu LGA Coordinator</p>
+          <p class="bio">Community builder and digital trainer passionate about civic duty.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/rahmatu.jpg" alt="Rahmatu Umar">
+          <h3>Rahmatu Umar</h3>
+          <p class="position">Zuru LGA Coordinator</p>
+          <p class="bio">Mobilizer for peace and responsible leadership from Zuru axis.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/halima.jpg" alt="Halima Adamu">
+          <h3>Halima Adamu</h3>
+          <p class="position">Yauri LGA Coordinator</p>
+          <p class="bio">Youth advocate focused on education and girl-child inclusion.</p>
+        </div>
+
+        <div class="leader-card">
+          <img src="../Images/bashir.jpg" alt="Bashir Lawal">
+          <h3>Bashir Lawal</h3>
+          <p class="position">Suru LGA Coordinator</p>
+          <p class="bio">Grassroots influencer and unity campaigner from Suru.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kebbi Progressive Social Network. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

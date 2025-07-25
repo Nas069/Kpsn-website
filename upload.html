@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+  if (!localStorage.getItem('adminLoggedIn')) {
+    alert("Access denied. Please login first.");
+    window.location.href = "index.html";
+  }
+</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - KPSN</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <main>
+    <section class="admin-panel">
+      <h2>Welcome, Admin</h2>
+    <button onclick="logoutAdmin()" style="margin-bottom: 20px;">🚪 Logout</button>
+
+      <!-- Upload Image -->
+      <!-- AUTO GALLERY UPLOAD -->
+<div class="admin-box">
+  <h3>🖼️ Upload Photo to Gallery (Auto)</h3>
+  <form id="galleryForm">
+    <input type="text" id="caption" placeholder="Enter caption" required>
+    <input type="file" id="imageFile" accept="image/*" required>
+    <button type="submit">Upload</button>
+  </form>
+  <p id="uploadStatus" style="margin-top:10px;"></p>
+</div>
+
+      <!-- Add Member -->
+      <div class="admin-box">
+  <h3>👤 Register New Grassroots Member</h3>
+  <form id="memberForm">
+    <input type="text" id="memberName" placeholder="Full Name" required>
+    <input type="text" id="memberLGA" placeholder="LGA" required>
+    <input type="text" id="memberWard" placeholder="Ward" required>
+    <input type="tel" id="memberPhone" placeholder="Phone" required>
+    <button type="submit">Save Member</button>
+  </form>
+  <p id="memberStatus"></p>
+</div>
+
+      <!-- Add News -->
+      <div class="admin-box">
+  <h3>📰 Post News Update</h3>
+  <form id="newsForm">
+    <input type="text" id="newsTitle" placeholder="News Title" required>
+    <input type="text" id="newsDate" placeholder="Date (e.g., July 24, 2025)" required>
+    <textarea id="newsSummary" placeholder="Short summary" rows="4" required></textarea>
+    <button type="submit">Save News</button>
+  </form>
+  <p id="newsStatus"></p>
+</div>
+    </section>
+  </main>
+
+</body>
+</html>
